@@ -26,6 +26,11 @@ public class CourseController {
         return new ResponseEntity<CourseEntity>(courseService.findById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/course/{courseId}/students")
+    public ResponseEntity<?> findAllByCourseId(@PathVariable Long courseId) {
+        return ResponseEntity.ok(courseService.findAllByCourseId(courseId));
+    }
+
     @PostMapping("/course")
     @ResponseStatus(HttpStatus.CREATED)
     public CourseEntity save(@RequestBody CourseEntity course) {
