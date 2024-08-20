@@ -1,11 +1,13 @@
 package zzz.microservice.student.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import zzz.microservice.student.entities.StudentEntity;
 import zzz.microservice.student.repositories.IStudentRepository;
 
 import java.util.List;
 
+@Service
 public class StudentServiceIMPL implements IStudentService{
 
     @Autowired
