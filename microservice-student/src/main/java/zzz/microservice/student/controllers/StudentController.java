@@ -10,7 +10,7 @@ import zzz.microservice.student.services.IStudentService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/s")
 public class StudentController {
 
     @Autowired

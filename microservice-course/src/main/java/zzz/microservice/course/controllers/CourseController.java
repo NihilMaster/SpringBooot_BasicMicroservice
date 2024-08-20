@@ -10,7 +10,7 @@ import zzz.microservice.course.services.ICourseService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/c")
 public class CourseController {
 
     @Autowired
