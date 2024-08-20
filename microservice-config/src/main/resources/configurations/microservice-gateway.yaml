@@ -1,0 +1,24 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: microservice-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: microservice-student
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/s/**
+        - id: microservice-course
+          uri: http://localhost:9090
+          predicates:
+            - Path=/api/c/**
+
+eureka:
+  client:
+    registerWithEureka: false
